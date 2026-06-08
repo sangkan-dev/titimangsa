@@ -56,10 +56,13 @@ Production docs builds use `BASE_PATH` and `SITE_URL` to generate asset paths,
 canonical URLs, and the sitemap. The GitHub Actions workflows read optional
 repository variables named `DOCS_BASE_PATH` and `DOCS_SITE_URL`.
 
-For the current GitHub Pages deployment, their fallback values are
-`/titimangsa/` and `https://sangkan-dev.github.io/titimangsa`. When moving to a
-custom domain, set `DOCS_BASE_PATH` to `/`, set `DOCS_SITE_URL` to the full
-custom-domain URL, and configure the custom domain in GitHub Pages.
+For the production docs deployment, set `DOCS_BASE_PATH` to `/` and
+`DOCS_SITE_URL` to `https://docs.titimangsa.sangkan.dev`. The repository also
+includes `apps/docs/public/CNAME` so GitHub Pages keeps the custom domain when
+deploying through Actions.
+
+If the custom domain is removed, the fallback values are `/titimangsa/` and
+`https://sangkan-dev.github.io/titimangsa`.
 
 Data commands will become active in Phase 1:
 

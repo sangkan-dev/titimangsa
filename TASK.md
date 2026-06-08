@@ -409,13 +409,13 @@ Tujuan: merapikan project untuk rilis open-source pertama.
 - [x] Tambahkan contoh self-hosting singkat.
 - [x] Review semua disclaimer.
 - [x] Buat changelog awal.
-- [ ] Buat release `v0.1.0`.
+- [x] Buat release `v0.1.0`.
 - [x] Buka issue untuk dataset tahun lain.
-- [ ] Publish announcement.
+- [x] Publish announcement.
 
 ### Acceptance Criteria
 
-- [ ] Release `v0.1.0` tersedia.
+- [x] Release `v0.1.0` tersedia.
 - [x] Project siap diumumkan sebagai open-source.
 - [x] Developer bisa memahami dan mencoba API dari README/docs.
 
@@ -455,8 +455,8 @@ MVP dianggap selesai jika semua item berikut terpenuhi:
 
 - [x] Dataset 2025 dan 2026 tersedia.
 - [x] Dataset 2025 dan 2026 memiliki source resmi publik.
-- [ ] `pnpm validate:data` berhasil di lokal dan CI.
-- [ ] `pnpm generate:data` berhasil di lokal dan CI.
+- [x] `pnpm validate:data` berhasil di lokal dan CI.
+- [x] `pnpm generate:data` berhasil di lokal dan CI.
 - [x] Generated JSON tersedia.
 - [x] Core workday logic memiliki unit test.
 - [x] API `/v1/health` berjalan.

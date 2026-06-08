@@ -16,7 +16,7 @@ https://titimangsa.sangkan.dev
 Docs:
 
 ```txt
-https://sangkan-dev.github.io/titimangsa/
+https://docs.titimangsa.sangkan.dev/
 ```
 
 Example:

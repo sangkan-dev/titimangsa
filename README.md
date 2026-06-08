@@ -68,12 +68,12 @@ unlimited.
 
 ## Documentation
 
-- Public docs: [sangkan-dev.github.io/titimangsa](https://sangkan-dev.github.io/titimangsa/)
+- Public docs: [docs.titimangsa.sangkan.dev](https://docs.titimangsa.sangkan.dev/)
 - Local docs app: [apps/docs](./apps/docs)
 - API contract: [API_CONTRACT.md](./API_CONTRACT.md)
 - Dataset guide: [DATASET.md](./DATASET.md)
 
-For a future custom domain, the recommended MVP setup is:
+Production domain setup:
 
 - API: `https://titimangsa.sangkan.dev`
 - Docs: `https://docs.titimangsa.sangkan.dev`

@@ -13,7 +13,7 @@ pushed to `main`.
 
 ```sh
 curl -I "https://titimangsa.sangkan.dev/v1/health"
-curl -I "https://sangkan-dev.github.io/titimangsa/"
+curl -I "https://docs.titimangsa.sangkan.dev/"
 ```
 
 6. Create and push the tag:
