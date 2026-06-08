@@ -1,0 +1,27 @@
+---
+description: Titimangsa project rules
+alwaysApply: true
+---
+
+Follow `AGENTS.md` before making changes.
+
+Key rules:
+
+- This is an unofficial Indonesia holiday and business day API.
+- Read `PRD.md` for requirements and `TASK.md` for execution order.
+- Read `ARCHITECTURE.md` before changing package boundaries.
+- Read `API_CONTRACT.md` before changing API responses.
+- Read `DATASET.md` before changing holiday data.
+- Read `DEVELOPMENT.md` for commands and workflow.
+- Use pnpm through Corepack:
+  `XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm ...`
+- Prefer CLI/package-manager scaffolding for dependencies and framework setup.
+- Keep dataset source of truth in `data/sources`.
+- Do not edit generated JSON directly.
+- Use only official public government documents as final dataset sources.
+- Keep `national_holiday` and `collective_leave` distinct.
+- Keep reusable date/business-day logic in `packages/core`.
+- Keep Hono/Cloudflare Workers API code in `apps/api`.
+- Keep VitePress docs in `apps/docs`.
+- Preserve the unofficial disclaimer in public-facing docs.
+- Update `TASK.md` checklists when completing listed work.

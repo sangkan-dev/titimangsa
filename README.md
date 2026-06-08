@@ -37,6 +37,18 @@ corepack pnpm test
 
 In this environment, pnpm is configured to use a local writable store through `.npmrc`.
 
+## Project Documents
+
+- [PRD.md](./PRD.md) - product requirements.
+- [TASK.md](./TASK.md) - implementation backlog.
+- [ARCHITECTURE.md](./ARCHITECTURE.md) - system architecture and boundaries.
+- [API_CONTRACT.md](./API_CONTRACT.md) - MVP API response and endpoint contract.
+- [DATASET.md](./DATASET.md) - dataset authoring and validation rules.
+- [DEVELOPMENT.md](./DEVELOPMENT.md) - local workflow and commands.
+- [DECISIONS.md](./DECISIONS.md) - lightweight decision log.
+- [AGENTS.md](./AGENTS.md) - AI agent and contributor instructions.
+- [SECURITY.md](./SECURITY.md) - security posture and reporting guidance.
+
 ## Repository Layout
 
 ```txt

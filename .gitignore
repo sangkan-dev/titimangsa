@@ -7,3 +7,6 @@ dist/
 .DS_Store
 *.log
 
+!.cursor/
+!.cursor/rules/
+!.cursor/rules/*.mdc
