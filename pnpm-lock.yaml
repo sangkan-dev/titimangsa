@@ -44,6 +44,9 @@ importers:
 
   apps/api:
     dependencies:
+      '@sangkan-dev/titimangsa':
+        specifier: workspace:*
+        version: link:../../packages/core
       hono:
         specifier: ^4.12.23
         version: 4.12.23

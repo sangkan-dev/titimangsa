@@ -201,97 +201,97 @@ Tujuan: mengekspos dataset dan core logic melalui Hono API yang siap dijalankan 
 
 ### API Setup
 
-- [ ] Setup `apps/api/package.json`.
-- [ ] Install dan konfigurasi Hono.
-- [ ] Buat `apps/api/src/index.ts`.
+- [x] Setup `apps/api/package.json`.
+- [x] Install dan konfigurasi Hono.
+- [x] Buat `apps/api/src/index.ts`.
 - [ ] Buat struktur routes:
-  - [ ] `health.ts`
-  - [ ] `holidays.ts`
-  - [ ] `workdays.ts`
-  - [ ] `sources.ts`
+  - [x] `health.ts`
+  - [x] `holidays.ts`
+  - [x] `workdays.ts`
+  - [x] `sources.ts`
 - [ ] Buat struktur services:
-  - [ ] `holiday-service.ts`
-  - [ ] `workday-service.ts`
-  - [ ] `source-service.ts`
+  - [x] `holiday-service.ts`
+  - [x] `workday-service.ts`
+  - [x] `source-service.ts`
 - [ ] Buat utilities:
-  - [ ] `date.ts`
-  - [ ] `response.ts`
-  - [ ] `errors.ts`
+  - [x] `date.ts`
+  - [x] `response.ts`
+  - [x] `errors.ts`
 
 ### Middleware & Headers
 
-- [ ] Tambahkan CORS publik.
-- [ ] Batasi method ke `GET` dan `OPTIONS`.
-- [ ] Tambahkan `Cache-Control: public, max-age=3600, s-maxage=86400` untuk endpoint read-only.
-- [ ] Tambahkan JSON content type.
-- [ ] Tambahkan fallback 404.
-- [ ] Tambahkan global error handler.
+- [x] Tambahkan CORS publik.
+- [x] Batasi method ke `GET` dan `OPTIONS`.
+- [x] Tambahkan `Cache-Control: public, max-age=3600, s-maxage=86400` untuk endpoint read-only.
+- [x] Tambahkan JSON content type.
+- [x] Tambahkan fallback 404.
+- [x] Tambahkan global error handler.
 
 ### Response & Error Contract
 
-- [ ] Implement response success format dengan `meta` dan `data`.
-- [ ] Implement error format dengan `error.code`, `error.message`, dan `error.details`.
-- [ ] Implement error code:
-  - [ ] `INVALID_DATE`
-  - [ ] `INVALID_YEAR`
-  - [ ] `INVALID_TYPE`
-  - [ ] `DATASET_NOT_FOUND`
-  - [ ] `INVALID_RANGE`
-  - [ ] `INTERNAL_ERROR`
+- [x] Implement response success format dengan `meta` dan `data`.
+- [x] Implement error format dengan `error.code`, `error.message`, dan `error.details`.
+- [x] Implement error code:
+  - [x] `INVALID_DATE`
+  - [x] `INVALID_YEAR`
+  - [x] `INVALID_TYPE`
+  - [x] `DATASET_NOT_FOUND`
+  - [x] `INVALID_RANGE`
+  - [x] `INTERNAL_ERROR`
 
 ### Endpoints
 
-- [ ] Implement `GET /v1/health`.
-- [ ] Implement `GET /v1/holidays`.
-- [ ] Support query `year`.
-- [ ] Support query `type`.
-- [ ] Support query `includeSources`.
-- [ ] Implement `GET /v1/holidays/check`.
-- [ ] Support query `date`.
-- [ ] Support query `includeCollectiveLeave`.
-- [ ] Support query `includeSources`.
-- [ ] Implement `GET /v1/workdays/check`.
-- [ ] Support query `date`.
-- [ ] Support query `includeCollectiveLeave`.
-- [ ] Support query `weekend`.
-- [ ] Implement `GET /v1/workdays/add`.
-- [ ] Support query `date`.
-- [ ] Support query `days`.
-- [ ] Support query `includeCollectiveLeave`.
-- [ ] Support query `weekend`.
-- [ ] Implement `GET /v1/workdays/diff`.
-- [ ] Support query `start`.
-- [ ] Support query `end`.
-- [ ] Support query `includeCollectiveLeave`.
-- [ ] Support query `weekend`.
-- [ ] Support query `inclusive`.
-- [ ] Implement `GET /v1/sources`.
-- [ ] Support query `year`.
+- [x] Implement `GET /v1/health`.
+- [x] Implement `GET /v1/holidays`.
+- [x] Support query `year`.
+- [x] Support query `type`.
+- [x] Support query `includeSources`.
+- [x] Implement `GET /v1/holidays/check`.
+- [x] Support query `date`.
+- [x] Support query `includeCollectiveLeave`.
+- [x] Support query `includeSources`.
+- [x] Implement `GET /v1/workdays/check`.
+- [x] Support query `date`.
+- [x] Support query `includeCollectiveLeave`.
+- [x] Support query `weekend`.
+- [x] Implement `GET /v1/workdays/add`.
+- [x] Support query `date`.
+- [x] Support query `days`.
+- [x] Support query `includeCollectiveLeave`.
+- [x] Support query `weekend`.
+- [x] Implement `GET /v1/workdays/diff`.
+- [x] Support query `start`.
+- [x] Support query `end`.
+- [x] Support query `includeCollectiveLeave`.
+- [x] Support query `weekend`.
+- [x] Support query `inclusive`.
+- [x] Implement `GET /v1/sources`.
+- [x] Support query `year`.
 
 ### API Tests
 
-- [ ] Test health endpoint.
-- [ ] Test list holidays default current year.
-- [ ] Test list holidays by year.
-- [ ] Test list holidays by type.
-- [ ] Test holiday check.
-- [ ] Test workday check.
-- [ ] Test add workdays.
-- [ ] Test diff workdays.
-- [ ] Test sources.
-- [ ] Test invalid date returns 400.
-- [ ] Test invalid type returns 400.
-- [ ] Test dataset not found returns 404.
-- [ ] Test response cache headers.
-- [ ] Test CORS headers.
+- [x] Test health endpoint.
+- [x] Test list holidays default current year.
+- [x] Test list holidays by year.
+- [x] Test list holidays by type.
+- [x] Test holiday check.
+- [x] Test workday check.
+- [x] Test add workdays.
+- [x] Test diff workdays.
+- [x] Test sources.
+- [x] Test invalid date returns 400.
+- [x] Test invalid type returns 400.
+- [x] Test dataset not found returns 404.
+- [x] Test response cache headers.
+- [x] Test CORS headers.
 
 ### Acceptance Criteria
 
-- [ ] Semua endpoint MVP berjalan lokal.
-- [ ] Semua endpoint memakai `/v1`.
-- [ ] Response sesuai kontrak PRD.
-- [ ] Error response konsisten.
-- [ ] API memakai core package untuk business logic.
+- [x] Semua endpoint MVP berjalan lokal.
+- [x] Semua endpoint memakai `/v1`.
+- [x] Response sesuai kontrak PRD.
+- [x] Error response konsisten.
+- [x] API memakai core package untuk business logic.
 
 ## Phase 4 - Cloudflare Deployment
 
