@@ -13,7 +13,7 @@
     "format": "prettier --write .",
     "test:watch": "vitest",
     "dev:api": "pnpm --filter @sangkan-dev/titimangsa-api dev",
-    "deploy:api": "pnpm --filter @sangkan-dev/titimangsa-api deploy",
+    "deploy:api": "pnpm --filter @sangkan-dev/titimangsa-api run deploy",
     "dev:docs": "pnpm --filter @sangkan-dev/titimangsa-docs dev",
     "build:docs": "pnpm --filter @sangkan-dev/titimangsa-docs build",
     "prepare": "husky"

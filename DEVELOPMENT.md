@@ -31,7 +31,19 @@ API:
 
 ```sh
 XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm dev:api
+XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm --filter @sangkan-dev/titimangsa-api deploy:dry-run
+XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm deploy:api
 ```
+
+API deployment uses Cloudflare Wrangler with `apps/api/wrangler.toml`.
+
+Required deployment secrets:
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+For GitHub Actions, add those secrets to the `production` environment used by
+`.github/workflows/deploy-api.yml`.
 
 Docs:
 

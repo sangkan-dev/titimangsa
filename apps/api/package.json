@@ -2,8 +2,9 @@
   "name": "@sangkan-dev/titimangsa-api",
   "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy --minify",
+    "dev": "wrangler dev --config wrangler.toml",
+    "deploy": "wrangler deploy --config wrangler.toml --minify",
+    "deploy:dry-run": "wrangler deploy --config wrangler.toml --dry-run --outdir /tmp/titimangsa-api-dry-run",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings",
     "test": "vitest run"
   },

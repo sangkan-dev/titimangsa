@@ -299,15 +299,15 @@ Tujuan: membuat API bisa dideploy ke Cloudflare Workers dan siap dipasang ke dom
 
 ### Tasks
 
-- [ ] Buat `apps/api/wrangler.toml`.
-- [ ] Konfigurasi Worker name.
-- [ ] Konfigurasi compatibility date.
-- [ ] Pastikan generated JSON ikut terbundle.
-- [ ] Tambahkan script deploy API.
-- [ ] Buat workflow `.github/workflows/deploy-api.yml`.
-- [ ] Tambahkan environment/secret deployment sesuai kebutuhan Wrangler.
+- [x] Buat `apps/api/wrangler.toml`.
+- [x] Konfigurasi Worker name.
+- [x] Konfigurasi compatibility date.
+- [x] Pastikan generated JSON ikut terbundle.
+- [x] Tambahkan script deploy API.
+- [x] Buat workflow `.github/workflows/deploy-api.yml`.
+- [x] Tambahkan environment/secret deployment sesuai kebutuhan Wrangler.
 - [ ] Deploy ke workers.dev sementara.
-- [ ] Konfigurasi custom domain `titimangsa.sangkan.dev`.
+- [x] Konfigurasi custom domain `titimangsa.sangkan.dev`.
 - [ ] Test endpoint production.
 
 ### Acceptance Criteria
