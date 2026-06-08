@@ -411,7 +411,7 @@ Tujuan: merapikan project untuk rilis open-source pertama.
 - [x] Buat changelog awal.
 - [x] Buat release `v0.1.0`.
 - [x] Buka issue untuk dataset tahun lain.
-- [x] Publish announcement.
+- [ ] Publish announcement.
 
 ### Acceptance Criteria
 
