@@ -3,6 +3,8 @@ dist/
 .turbo/
 .vitepress/cache/
 .vitepress/dist/
+apps/docs/.vitepress/cache/
+apps/docs/.vitepress/dist/
 .wrangler/
 .DS_Store
 *.log

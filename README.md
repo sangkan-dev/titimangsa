@@ -14,9 +14,15 @@ Titimangsa is not an official government API. The dataset is curated from public
 
 Titimangsa bukan API resmi pemerintah. Dataset dikurasi dari dokumen resmi pemerintah yang tersedia untuk publik. Untuk kepastian hukum atau administratif, selalu rujuk dokumen sumber asli.
 
-## Planned API
+## Public API
 
-All public endpoints are planned under `/v1`.
+The public API is available at:
+
+```txt
+https://titimangsa.sangkan.dev
+```
+
+Public endpoints live under `/v1`.
 
 - `GET /v1/health`
 - `GET /v1/holidays`
@@ -25,6 +31,11 @@ All public endpoints are planned under `/v1`.
 - `GET /v1/workdays/add`
 - `GET /v1/workdays/diff`
 - `GET /v1/sources`
+
+## Documentation
+
+- Local docs app: [apps/docs](./apps/docs)
+- Public docs deployment workflow: [.github/workflows/deploy-docs.yml](./.github/workflows/deploy-docs.yml)
 
 ## Development
 

@@ -323,47 +323,47 @@ Tujuan: menyediakan dokumentasi publik agar developer bisa integrasi cepat dan k
 
 ### Docs Setup
 
-- [ ] Setup `apps/docs/package.json`.
-- [ ] Setup VitePress.
-- [ ] Buat `.vitepress/config.ts`.
-- [ ] Tambahkan script docs dev/build.
+- [x] Setup `apps/docs/package.json`.
+- [x] Setup VitePress.
+- [x] Buat `.vitepress/config.ts`.
+- [x] Tambahkan script docs dev/build.
 
 ### Pages
 
-- [ ] Buat `apps/docs/index.md`.
-- [ ] Buat `apps/docs/guide/getting-started.md`.
-- [ ] Buat `apps/docs/guide/api-reference.md`.
-- [ ] Buat `apps/docs/guide/data-sources.md`.
-- [ ] Buat `apps/docs/guide/contributing-data.md`.
-- [ ] Buat `apps/docs/guide/limitations.md`.
-- [ ] Buat `apps/docs/guide/changelog.md`.
+- [x] Buat `apps/docs/index.md`.
+- [x] Buat `apps/docs/guide/getting-started.md`.
+- [x] Buat `apps/docs/guide/api-reference.md`.
+- [x] Buat `apps/docs/guide/data-sources.md`.
+- [x] Buat `apps/docs/guide/contributing-data.md`.
+- [x] Buat `apps/docs/guide/limitations.md`.
+- [x] Buat `apps/docs/guide/changelog.md`.
 
 ### Required Content
 
-- [ ] Jelaskan apa itu Titimangsa.
-- [ ] Jelaskan status unofficial.
-- [ ] Jelaskan sumber data resmi publik.
-- [ ] Jelaskan cara menggunakan API.
-- [ ] Tambahkan contoh request/response.
-- [ ] Jelaskan cara kontribusi data.
-- [ ] Jelaskan cara menjalankan validasi dataset.
-- [ ] Jelaskan perbedaan `national_holiday` dan `collective_leave`.
-- [ ] Jelaskan opsi `includeCollectiveLeave`.
-- [ ] Jelaskan limitasi dan disclaimer.
-- [ ] Jelaskan Cloudflare Workers Free bukan unlimited.
+- [x] Jelaskan apa itu Titimangsa.
+- [x] Jelaskan status unofficial.
+- [x] Jelaskan sumber data resmi publik.
+- [x] Jelaskan cara menggunakan API.
+- [x] Tambahkan contoh request/response.
+- [x] Jelaskan cara kontribusi data.
+- [x] Jelaskan cara menjalankan validasi dataset.
+- [x] Jelaskan perbedaan `national_holiday` dan `collective_leave`.
+- [x] Jelaskan opsi `includeCollectiveLeave`.
+- [x] Jelaskan limitasi dan disclaimer.
+- [x] Jelaskan Cloudflare Workers Free bukan unlimited.
 
 ### Deployment
 
-- [ ] Buat workflow `.github/workflows/deploy-docs.yml`.
+- [x] Buat workflow `.github/workflows/deploy-docs.yml`.
 - [ ] Deploy docs.
-- [ ] Tautkan docs dari README.
+- [x] Tautkan docs dari README.
 
 ### Acceptance Criteria
 
-- [ ] Docs bisa dijalankan lokal.
-- [ ] Docs bisa dibuild.
+- [x] Docs bisa dijalankan lokal.
+- [x] Docs bisa dibuild.
 - [ ] Docs publik tersedia.
-- [ ] Disclaimer tersedia dalam Bahasa Indonesia dan Inggris.
+- [x] Disclaimer tersedia dalam Bahasa Indonesia dan Inggris.
 
 ## Phase 6 - CI & Governance
 
