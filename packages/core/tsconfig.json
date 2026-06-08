@@ -2,14 +2,14 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-    "rootDir": "src",
+    "rootDir": "../..",
     "outDir": "dist",
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
     "target": "es2022",
-    "types": [],
+    "types": ["node"],
     "lib": ["es2022"],
     // For nodejs:
     // "lib": ["esnext"],
@@ -45,5 +45,7 @@
     "moduleResolution": "nodenext",
     "esModuleInterop": true,
     "resolveJsonModule": true
-  }
+  },
+  "include": ["src/**/*.ts", "../../data/generated/*.json"],
+  "exclude": ["src/**/*.test.ts"]
 }

@@ -134,66 +134,66 @@ Tujuan: membuat business-day engine reusable yang menjadi sumber logic utama unt
 
 ### Package Setup
 
-- [ ] Setup `packages/core/package.json`.
-- [ ] Setup TypeScript build untuk `packages/core`.
-- [ ] Export public API dari `packages/core/src/index.ts`.
-- [ ] Definisikan tipe domain di `packages/core/src/types.ts`.
+- [x] Setup `packages/core/package.json`.
+- [x] Setup TypeScript build untuk `packages/core`.
+- [x] Export public API dari `packages/core/src/index.ts`.
+- [x] Definisikan tipe domain di `packages/core/src/types.ts`.
 
 ### Dataset Access
 
-- [ ] Implement loader dataset generated JSON.
-- [ ] Implement lookup dataset by year.
-- [ ] Implement error untuk dataset tidak tersedia.
-- [ ] Implement helper untuk filter holiday type.
-- [ ] Implement helper untuk include/exclude collective leave.
+- [x] Implement loader dataset generated JSON.
+- [x] Implement lookup dataset by year.
+- [x] Implement error untuk dataset tidak tersedia.
+- [x] Implement helper untuk filter holiday type.
+- [x] Implement helper untuk include/exclude collective leave.
 
 ### Date Utilities
 
-- [ ] Implement validasi format ISO date.
-- [ ] Implement parsing date tanpa timezone drift.
-- [ ] Implement formatter date `YYYY-MM-DD`.
-- [ ] Implement weekday English.
-- [ ] Implement weekday lokal Indonesia.
-- [ ] Implement weekend parser dari string seperti `sat,sun`.
+- [x] Implement validasi format ISO date.
+- [x] Implement parsing date tanpa timezone drift.
+- [x] Implement formatter date `YYYY-MM-DD`.
+- [x] Implement weekday English.
+- [x] Implement weekday lokal Indonesia.
+- [x] Implement weekend parser dari string seperti `sat,sun`.
 
 ### Public Functions
 
-- [ ] Implement `getHolidays(year, options)`.
-- [ ] Implement `checkHoliday(date, options)`.
-- [ ] Implement `isWeekend(date, options)`.
-- [ ] Implement `isWorkday(date, options)`.
-- [ ] Implement `addWorkdays(date, days, options)`.
-- [ ] Implement `diffWorkdays(start, end, options)`.
-- [ ] Implement `getSources(year)`.
+- [x] Implement `getHolidays(year, options)`.
+- [x] Implement `checkHoliday(date, options)`.
+- [x] Implement `isWeekend(date, options)`.
+- [x] Implement `isWorkday(date, options)`.
+- [x] Implement `addWorkdays(date, days, options)`.
+- [x] Implement `diffWorkdays(start, end, options)`.
+- [x] Implement `getSources(year)`.
 
 ### Business Rules
 
-- [ ] Default weekend adalah `sat,sun`.
-- [ ] Default `includeCollectiveLeave` adalah `true`.
-- [ ] Tanggal awal pada `addWorkdays` tidak dihitung sebagai hari pertama.
-- [ ] `days` untuk MVP hanya wajib mendukung integer positif.
-- [ ] `diffWorkdays` default inclusive adalah `true`.
-- [ ] `isWorkday` mempertimbangkan weekend, libur nasional, dan cuti bersama sesuai opsi.
+- [x] Default weekend adalah `sat,sun`.
+- [x] Default `includeCollectiveLeave` adalah `true`.
+- [x] Tanggal awal pada `addWorkdays` tidak dihitung sebagai hari pertama.
+- [x] `days` untuk MVP hanya wajib mendukung integer positif.
+- [x] `diffWorkdays` default inclusive adalah `true`.
+- [x] `isWorkday` mempertimbangkan weekend, libur nasional, dan cuti bersama sesuai opsi.
 
 ### Tests
 
-- [ ] Test `getHolidays`.
-- [ ] Test `checkHoliday`.
-- [ ] Test `isWeekend`.
-- [ ] Test `isWorkday`.
-- [ ] Test `addWorkdays`.
-- [ ] Test `diffWorkdays`.
-- [ ] Test opsi `includeCollectiveLeave`.
-- [ ] Test opsi custom `weekend`.
-- [ ] Test error invalid date.
-- [ ] Test error dataset tidak tersedia.
+- [x] Test `getHolidays`.
+- [x] Test `checkHoliday`.
+- [x] Test `isWeekend`.
+- [x] Test `isWorkday`.
+- [x] Test `addWorkdays`.
+- [x] Test `diffWorkdays`.
+- [x] Test opsi `includeCollectiveLeave`.
+- [x] Test opsi custom `weekend`.
+- [x] Test error invalid date.
+- [x] Test error dataset tidak tersedia.
 
 ### Acceptance Criteria
 
-- [ ] Public functions sesuai PRD tersedia.
-- [ ] Core logic tidak bergantung pada Hono atau Cloudflare runtime.
-- [ ] Unit test core berjalan via `pnpm test`.
-- [ ] Edge case tanggal dan weekend tercakup test.
+- [x] Public functions sesuai PRD tersedia.
+- [x] Core logic tidak bergantung pada Hono atau Cloudflare runtime.
+- [x] Unit test core berjalan via `pnpm test`.
+- [x] Edge case tanggal dan weekend tercakup test.
 
 ## Phase 3 - API MVP
 

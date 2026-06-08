@@ -2,14 +2,23 @@
   "name": "@sangkan-dev/titimangsa",
   "version": "0.0.0",
   "description": "Core holiday and business day logic for Titimangsa",
-  "main": "dist/index.js",
+  "main": "dist/packages/core/src/index.js",
+  "types": "dist/packages/core/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/packages/core/src/index.d.ts",
+      "import": "./dist/packages/core/src/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "vitest",
+    "test": "vitest run",
     "build": "tsc -p tsconfig.json"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "type": "module",
-  "types": "dist/index.d.ts"
+  "type": "module"
 }
