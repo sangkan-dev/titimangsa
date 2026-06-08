@@ -1,0 +1,65 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate Data, Packages, API, and Docs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate source data
+        run: pnpm validate:data
+
+      - name: Generate data
+        run: pnpm generate:data
+
+      - name: Verify generated data is committed
+        run: git diff --exit-code -- data/generated
+
+      - name: Check formatting
+        run: pnpm format:check
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Run tests
+        run: pnpm test
+
+      - name: Build core package
+        run: pnpm --filter @sangkan-dev/titimangsa build
+
+      - name: Build API
+        run: pnpm --filter @sangkan-dev/titimangsa-api deploy:dry-run
+
+      - name: Build docs
+        run: pnpm build:docs
+        env:
+          BASE_PATH: ${{ vars.DOCS_BASE_PATH || '/titimangsa/' }}
+          SITE_URL: ${{ vars.DOCS_SITE_URL || 'https://sangkan-dev.github.io/titimangsa' }}

@@ -355,14 +355,14 @@ Tujuan: menyediakan dokumentasi publik agar developer bisa integrasi cepat dan k
 ### Deployment
 
 - [x] Buat workflow `.github/workflows/deploy-docs.yml`.
-- [ ] Deploy docs.
+- [x] Deploy docs.
 - [x] Tautkan docs dari README.
 
 ### Acceptance Criteria
 
 - [x] Docs bisa dijalankan lokal.
 - [x] Docs bisa dibuild.
-- [ ] Docs publik tersedia.
+- [x] Docs publik tersedia.
 - [x] Disclaimer tersedia dalam Bahasa Indonesia dan Inggris.
 
 ## Phase 6 - CI & Governance
@@ -371,30 +371,30 @@ Tujuan: memastikan perubahan data, core, API, dan docs tervalidasi sebelum merge
 
 ### CI
 
-- [ ] Buat `.github/workflows/validate-data.yml`.
-- [ ] CI menjalankan `pnpm install`.
-- [ ] CI menjalankan `pnpm validate:data`.
-- [ ] CI menjalankan `pnpm generate:data`.
-- [ ] CI menjalankan `pnpm test`.
-- [ ] CI menjalankan build package core.
-- [ ] CI menjalankan build API.
-- [ ] CI menjalankan build docs.
+- [x] Buat `.github/workflows/validate-data.yml`.
+- [x] CI menjalankan `pnpm install`.
+- [x] CI menjalankan `pnpm validate:data`.
+- [x] CI menjalankan `pnpm generate:data`.
+- [x] CI menjalankan `pnpm test`.
+- [x] CI menjalankan build package core.
+- [x] CI menjalankan build API.
+- [x] CI menjalankan build docs.
 
 ### Governance
 
-- [ ] Buat issue templates.
-- [ ] Buat PR template.
-- [ ] Tambahkan checklist source official/public.
-- [ ] Tambahkan checklist generated JSON update.
-- [ ] Tambahkan checklist tests passed.
-- [ ] Tambahkan kontribusi data rules di `CONTRIBUTING.md`.
-- [ ] Tambahkan lisensi dataset/docs jika dipisahkan dari MIT.
+- [x] Buat issue templates.
+- [x] Buat PR template.
+- [x] Tambahkan checklist source official/public.
+- [x] Tambahkan checklist generated JSON update.
+- [x] Tambahkan checklist tests passed.
+- [x] Tambahkan kontribusi data rules di `CONTRIBUTING.md`.
+- [x] Tambahkan lisensi dataset/docs jika dipisahkan dari MIT.
 
 ### Acceptance Criteria
 
-- [ ] Pull request perubahan data gagal jika validasi gagal.
-- [ ] Pull request memiliki checklist kontribusi data.
-- [ ] Project memiliki panduan kontribusi yang jelas.
+- [x] Pull request perubahan data gagal jika validasi gagal.
+- [x] Pull request memiliki checklist kontribusi data.
+- [x] Project memiliki panduan kontribusi yang jelas.
 
 ## Phase 7 - Public Launch
 

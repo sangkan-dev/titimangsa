@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "Titimangsa"
-  text: "Indonesia holiday and business day API"
-  tagline: "Curated from official public sources for Indonesian national holidays, collective leave, and workday calculations."
+  text: "API hari libur Indonesia"
+  tagline: "Data libur nasional, cuti bersama, dan perhitungan hari kerja yang dikurasi dari sumber resmi publik."
   actions:
     - theme: brand
       text: Get Started
@@ -21,6 +21,15 @@ features:
   - title: Edge Ready
     details: The public API runs on Cloudflare Workers and returns cacheable read-only responses.
 ---
+
+## API Hari Libur Indonesia
+
+Titimangsa menyediakan API hari libur Indonesia untuk mengambil data libur
+nasional dan cuti bersama, memeriksa status hari kerja, menambahkan hari kerja,
+dan menghitung jumlah hari kerja di antara dua tanggal.
+
+API publik bersifat read-only, dapat diakses tanpa autentikasi, dan dirancang
+untuk integrasi payroll, absensi, SLA, invoice, serta penjadwalan operasional.
 
 ## Unofficial Disclaimer
 

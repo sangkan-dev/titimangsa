@@ -52,6 +52,15 @@ XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm dev:docs
 XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm build:docs
 ```
 
+Production docs builds use `BASE_PATH` and `SITE_URL` to generate asset paths,
+canonical URLs, and the sitemap. The GitHub Actions workflows read optional
+repository variables named `DOCS_BASE_PATH` and `DOCS_SITE_URL`.
+
+For the current GitHub Pages deployment, their fallback values are
+`/titimangsa/` and `https://sangkan-dev.github.io/titimangsa`. When moving to a
+custom domain, set `DOCS_BASE_PATH` to `/`, set `DOCS_SITE_URL` to the full
+custom-domain URL, and configure the custom domain in GitHub Pages.
+
 Data commands will become active in Phase 1:
 
 ```sh
@@ -123,6 +132,20 @@ XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm validate:data
 XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm generate:data
 XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm test
 ```
+
+## Continuous Integration
+
+The Validate workflow runs for every pull request and push to `main`. It:
+
+- installs dependencies from the lockfile
+- validates source data
+- regenerates data and rejects uncommitted generated JSON changes
+- checks formatting and types
+- runs tests
+- builds the core package, API dry run, and docs site
+
+Repository maintainers should configure the `Validate Data, Packages, API, and
+Docs` job as a required status check for the `main` branch.
 
 ## Troubleshooting
 

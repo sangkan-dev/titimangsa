@@ -1,0 +1,30 @@
+name: Bug report
+description: Report incorrect API or business-day calculation behavior.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe what happened and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include the endpoint, query parameters, response, or minimal code needed to reproduce the issue.
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Relevant date or dataset year
+      placeholder: 2026-03-20 or 2026
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add logs, screenshots, or official source links when relevant.

@@ -1,0 +1,52 @@
+name: Data correction
+description: Report missing or incorrect Indonesian holiday or collective leave data.
+title: "[Data]: "
+labels:
+  - data
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Data corrections must be traceable to an official public government source.
+  - type: input
+    id: year
+    attributes:
+      label: Dataset year
+      placeholder: "2026"
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction
+      description: Explain the current value and the expected value.
+    validations:
+      required: true
+  - type: input
+    id: official_source
+    attributes:
+      label: Official public source URL
+      description: Link to the government document or announcement supporting the correction.
+      placeholder: https://example.go.id/official-document
+    validations:
+      required: true
+  - type: dropdown
+    id: holiday_type
+    attributes:
+      label: Holiday type
+      options:
+        - national_holiday
+        - collective_leave
+        - Source metadata only
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Source confirmation
+      options:
+        - label: The source is an official public government source, not a community calendar or blog.
+          required: true
+        - label: I understand Titimangsa is not an official government API.
+          required: true

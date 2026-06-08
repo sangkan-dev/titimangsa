@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/sangkan-dev/titimangsa/security/policy
+    about: Report security vulnerabilities privately.
+  - name: API documentation
+    url: https://sangkan-dev.github.io/titimangsa/
+    about: Read the API documentation before opening an issue.

@@ -35,6 +35,7 @@ Public endpoints live under `/v1`.
 ## Documentation
 
 - Local docs app: [apps/docs](./apps/docs)
+- Public docs: [sangkan-dev.github.io/titimangsa](https://sangkan-dev.github.io/titimangsa/)
 - Public docs deployment workflow: [.github/workflows/deploy-docs.yml](./.github/workflows/deploy-docs.yml)
 
 ## Development
@@ -77,4 +78,4 @@ scripts/
 
 ## License
 
-MIT.
+MIT. The license covers the source code, dataset, and documentation.

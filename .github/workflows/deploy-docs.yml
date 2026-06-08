@@ -48,7 +48,8 @@ jobs:
       - name: Build docs
         run: pnpm build:docs
         env:
-          BASE_PATH: /titimangsa/
+          BASE_PATH: ${{ vars.DOCS_BASE_PATH || '/titimangsa/' }}
+          SITE_URL: ${{ vars.DOCS_SITE_URL || 'https://sangkan-dev.github.io/titimangsa' }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
