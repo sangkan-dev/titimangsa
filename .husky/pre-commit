@@ -1,0 +1,1 @@
+XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm lint-staged
