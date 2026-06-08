@@ -306,16 +306,16 @@ Tujuan: membuat API bisa dideploy ke Cloudflare Workers dan siap dipasang ke dom
 - [x] Tambahkan script deploy API.
 - [x] Buat workflow `.github/workflows/deploy-api.yml`.
 - [x] Tambahkan environment/secret deployment sesuai kebutuhan Wrangler.
-- [ ] Deploy ke workers.dev sementara.
+- [x] Deploy ke workers.dev sementara.
 - [x] Konfigurasi custom domain `titimangsa.sangkan.dev`.
-- [ ] Test endpoint production.
+- [x] Test endpoint production.
 
 ### Acceptance Criteria
 
-- [ ] API tersedia di Cloudflare Workers.
-- [ ] `/v1/health` production mengembalikan status ok.
-- [ ] Endpoint MVP production mengembalikan data valid.
-- [ ] Cache header tersedia di production.
+- [x] API tersedia di Cloudflare Workers.
+- [x] `/v1/health` production mengembalikan status ok.
+- [x] Endpoint MVP production mengembalikan data valid.
+- [x] Cache header tersedia di production.
 
 ## Phase 5 - Documentation
 
