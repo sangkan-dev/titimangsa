@@ -2,6 +2,13 @@
 
 This page tracks public-facing documentation and API milestones.
 
+## v0.1.0 - 2026-06-08
+
+- Prepared the first MVP release candidate.
+- Stabilized `/v1` API contract for public launch.
+- Added CI and governance checks for data, API, core package, and docs.
+- Added SEO metadata, sitemap, and `robots.txt` for the docs site.
+
 ## 2026-06-08
 
 - Public API MVP deployed to Cloudflare Workers at

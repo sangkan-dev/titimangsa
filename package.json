@@ -1,6 +1,6 @@
 {
   "name": "titimangsa",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Indonesia holiday and business day API, curated from official public sources.",
   "main": "index.js",
   "scripts": {

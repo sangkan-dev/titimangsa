@@ -1,4 +1,5 @@
 import {
+  invalidBooleanError,
   invalidDateError,
   invalidRangeError,
   invalidYearError,
@@ -65,5 +66,5 @@ export function getOptionalBoolean(
     return false;
   }
 
-  throw invalidRangeError(field, value);
+  throw invalidBooleanError(field, value);
 }

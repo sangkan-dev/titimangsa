@@ -78,3 +78,27 @@ Reasoning:
 - API is read-only
 - simpler security posture
 - easier open-source adoption
+
+## 0007 - Keep API Stable And Put Docs On A Dedicated Subdomain
+
+Status: accepted
+
+For the MVP launch, keep the public API at `https://titimangsa.sangkan.dev` and
+serve docs from GitHub Pages until a custom docs domain is configured.
+
+Recommended custom domain setup:
+
+- API: `https://titimangsa.sangkan.dev`
+- Docs: `https://docs.titimangsa.sangkan.dev`
+
+If the root `titimangsa.sangkan.dev` later becomes a product/docs landing page,
+keep `https://titimangsa.sangkan.dev/v1` working as a backwards-compatible API
+entrypoint and add `https://api.titimangsa.sangkan.dev` as an API alias.
+
+Reasoning:
+
+- the current API base URL is already deployed and should remain stable
+- docs need a crawlable canonical URL for search engines
+- a dedicated docs subdomain avoids mixing GitHub Pages and Worker routing on
+  one host
+- an API alias can be introduced later without breaking existing clients

@@ -15,6 +15,22 @@ type ApiError = {
   details?: Record<string, unknown>;
 };
 
+class ApiHttpError extends Error implements ApiError {
+  readonly code: ApiErrorCode;
+  readonly details: Record<string, unknown>;
+
+  constructor(
+    code: ApiErrorCode,
+    message: string,
+    details?: Record<string, unknown>,
+  ) {
+    super(message);
+    this.name = "ApiHttpError";
+    this.code = code;
+    this.details = details ?? {};
+  }
+}
+
 const statusByCode = {
   INVALID_DATE: 400,
   INVALID_YEAR: 400,
@@ -41,43 +57,45 @@ export function handleApiError(c: Context, error: unknown) {
 }
 
 export function invalidDateError(field: string, value?: string): ApiError {
-  return {
-    code: "INVALID_DATE",
-    message: "Date must use YYYY-MM-DD format.",
-    details: {
-      field,
-      value,
-    },
-  };
+  return new ApiHttpError("INVALID_DATE", "Date must use YYYY-MM-DD format.", {
+    field,
+    value,
+  });
 }
 
 export function invalidYearError(value?: string): ApiError {
-  return {
-    code: "INVALID_YEAR",
-    message: "Year must be a four-digit year.",
-    details: {
-      field: "year",
-      value,
-    },
-  };
+  return new ApiHttpError("INVALID_YEAR", "Year must be a four-digit year.", {
+    field: "year",
+    value,
+  });
 }
 
 export function invalidRangeError(field: string, value?: string): ApiError {
-  return {
-    code: "INVALID_RANGE",
-    message: "Value must be a positive integer.",
-    details: {
+  return new ApiHttpError(
+    "INVALID_RANGE",
+    "Value must be a positive integer.",
+    {
       field,
       value,
     },
-  };
+  );
+}
+
+export function invalidBooleanError(field: string, value?: string): ApiError {
+  return new ApiHttpError("INVALID_TYPE", "Value must be true or false.", {
+    field,
+    value,
+  });
+}
+
+export function invalidQueryError(field: string): ApiError {
+  return new ApiHttpError("INVALID_TYPE", "Query parameter is not supported.", {
+    field,
+  });
 }
 
 export function notFoundError(message: string): ApiError {
-  return {
-    code: "DATASET_NOT_FOUND",
-    message,
-  };
+  return new ApiHttpError("DATASET_NOT_FOUND", message);
 }
 
 function toApiError(error: unknown): ApiError {

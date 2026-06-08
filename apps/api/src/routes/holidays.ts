@@ -5,11 +5,14 @@ import {
   getOptionalYear,
   getRequiredDate,
 } from "../utils/date.js";
+import { assertKnownQueryParams } from "../utils/query.js";
 import { successResponse } from "../utils/response.js";
 
 export const holidaysRoute = new Hono();
 
 holidaysRoute.get("/", (c) => {
+  assertKnownQueryParams(c.req.query(), ["year", "type", "includeSources"]);
+
   const year = getOptionalYear(c.req.query("year"));
   const includeSources = getOptionalBoolean(
     c.req.query("includeSources"),
@@ -27,6 +30,12 @@ holidaysRoute.get("/", (c) => {
 });
 
 holidaysRoute.get("/check", (c) => {
+  assertKnownQueryParams(c.req.query(), [
+    "date",
+    "includeCollectiveLeave",
+    "includeSources",
+  ]);
+
   const date = getRequiredDate(c.req.query("date"), "date");
   const includeCollectiveLeave = getOptionalBoolean(
     c.req.query("includeCollectiveLeave"),

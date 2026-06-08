@@ -43,3 +43,7 @@ comma-separated string such as `fri,sat`.
 The public API is deployed on Cloudflare Workers. Cloudflare Workers Free is not
 unlimited, and platform limits can change. Treat the hosted API as a convenient
 public endpoint, not a guaranteed unlimited service.
+
+Client and application-side caching are recommended for read-heavy use cases.
+Holiday datasets change rarely, so callers should avoid refetching the same
+yearly data on every request.

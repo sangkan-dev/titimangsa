@@ -16,5 +16,6 @@
     "wrangler": "^4.4.0"
   },
   "description": "Cloudflare Workers API for Titimangsa",
-  "license": "MIT"
+  "license": "MIT",
+  "version": "0.1.0"
 }

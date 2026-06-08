@@ -195,6 +195,37 @@ describe("API MVP", () => {
     });
   });
 
+  it("returns 400 for unsupported query parameters", async () => {
+    const { response, json } = await getJson(
+      "/v1/workdays/check?date=2026-03-20&foo=bar",
+    );
+
+    expect(response.status).toBe(400);
+    expect(json.error).toMatchObject({
+      code: "INVALID_TYPE",
+      message: "Query parameter is not supported.",
+      details: {
+        field: "foo",
+      },
+    });
+  });
+
+  it("returns 400 for invalid boolean query values", async () => {
+    const { response, json } = await getJson(
+      "/v1/holidays/check?date=2026-03-20&includeCollectiveLeave=yes",
+    );
+
+    expect(response.status).toBe(400);
+    expect(json.error).toMatchObject({
+      code: "INVALID_TYPE",
+      message: "Value must be true or false.",
+      details: {
+        field: "includeCollectiveLeave",
+        value: "yes",
+      },
+    });
+  });
+
   it("returns 404 for missing datasets", async () => {
     const { response, json } = await getJson("/v1/holidays?year=2024");
 

@@ -1,6 +1,6 @@
 {
   "name": "@sangkan-dev/titimangsa",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Core holiday and business day logic for Titimangsa",
   "main": "src/index.ts",
   "types": "src/index.ts",

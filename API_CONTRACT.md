@@ -8,6 +8,7 @@ of complete product requirements.
 - Public endpoints live under `/v1`.
 - MVP API is read-only.
 - Supported methods are `GET` and `OPTIONS`.
+- Endpoints reject query parameters that are not documented for that endpoint.
 - Runtime target is Cloudflare Workers.
 - API framework is Hono.
 - Country code is `ID`.
@@ -56,7 +57,7 @@ All errors should use:
 | ------------------- | ---: | ------------------------------------------- |
 | `INVALID_DATE`      |  400 | Date format is invalid                      |
 | `INVALID_YEAR`      |  400 | Year is invalid                             |
-| `INVALID_TYPE`      |  400 | Holiday type is unknown                     |
+| `INVALID_TYPE`      |  400 | Query value or holiday type is unsupported  |
 | `DATASET_NOT_FOUND` |  404 | Dataset for requested year is not available |
 | `INVALID_RANGE`     |  400 | Date range is invalid                       |
 | `INTERNAL_ERROR`    |  500 | Internal error                              |

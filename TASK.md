@@ -402,75 +402,75 @@ Tujuan: merapikan project untuk rilis open-source pertama.
 
 ### Tasks
 
-- [ ] Rapikan README.
-- [ ] Tambahkan badge CI.
-- [ ] Tambahkan badge license.
-- [ ] Tambahkan contoh usage API.
-- [ ] Tambahkan contoh self-hosting singkat.
-- [ ] Review semua disclaimer.
-- [ ] Buat changelog awal.
+- [x] Rapikan README.
+- [x] Tambahkan badge CI.
+- [x] Tambahkan badge license.
+- [x] Tambahkan contoh usage API.
+- [x] Tambahkan contoh self-hosting singkat.
+- [x] Review semua disclaimer.
+- [x] Buat changelog awal.
 - [ ] Buat release `v0.1.0`.
-- [ ] Buka issue untuk dataset tahun lain.
+- [x] Buka issue untuk dataset tahun lain.
 - [ ] Publish announcement.
 
 ### Acceptance Criteria
 
 - [ ] Release `v0.1.0` tersedia.
-- [ ] Project siap diumumkan sebagai open-source.
-- [ ] Developer bisa memahami dan mencoba API dari README/docs.
+- [x] Project siap diumumkan sebagai open-source.
+- [x] Developer bisa memahami dan mencoba API dari README/docs.
 
 ## Cross-Cutting Requirements
 
 ### Data Integrity
 
-- [ ] Tidak ada data final dari sumber komunitas sebagai source of truth.
-- [ ] Semua dataset menyimpan metadata sumber.
-- [ ] Revisi dataset menaikkan field `revision`.
-- [ ] Perubahan dataset terdokumentasi di changelog.
+- [x] Tidak ada data final dari sumber komunitas sebagai source of truth.
+- [x] Semua dataset menyimpan metadata sumber.
+- [x] Revisi dataset menaikkan field `revision`.
+- [x] Perubahan dataset terdokumentasi di changelog.
 
 ### API Quality
 
-- [ ] Endpoint hanya menerima parameter yang terdokumentasi.
-- [ ] Parameter boolean diparse konsisten.
-- [ ] Parameter weekend diparse konsisten.
-- [ ] Error message jelas dan stabil.
-- [ ] Response tidak membocorkan stack trace.
+- [x] Endpoint hanya menerima parameter yang terdokumentasi.
+- [x] Parameter boolean diparse konsisten.
+- [x] Parameter weekend diparse konsisten.
+- [x] Error message jelas dan stabil.
+- [x] Response tidak membocorkan stack trace.
 
 ### Security & Abuse
 
-- [ ] Tidak ada secret di runtime client.
-- [ ] Tidak ada endpoint write publik.
-- [ ] CORS hanya membuka method yang diperlukan.
-- [ ] Dokumentasi menyarankan client-side caching.
+- [x] Tidak ada secret di runtime client.
+- [x] Tidak ada endpoint write publik.
+- [x] CORS hanya membuka method yang diperlukan.
+- [x] Dokumentasi menyarankan client-side caching.
 
 ### Compatibility
 
-- [ ] API response MVP stabil sebelum public launch.
-- [ ] Breaking change berikutnya harus memakai `/v2`.
-- [ ] Generated JSON mempertahankan shape yang terdokumentasi.
+- [x] API response MVP stabil sebelum public launch.
+- [x] Breaking change berikutnya harus memakai `/v2`.
+- [x] Generated JSON mempertahankan shape yang terdokumentasi.
 
 ## MVP Definition of Done
 
 MVP dianggap selesai jika semua item berikut terpenuhi:
 
-- [ ] Dataset 2025 dan 2026 tersedia.
-- [ ] Dataset 2025 dan 2026 memiliki source resmi publik.
+- [x] Dataset 2025 dan 2026 tersedia.
+- [x] Dataset 2025 dan 2026 memiliki source resmi publik.
 - [ ] `pnpm validate:data` berhasil di lokal dan CI.
 - [ ] `pnpm generate:data` berhasil di lokal dan CI.
-- [ ] Generated JSON tersedia.
-- [ ] Core workday logic memiliki unit test.
-- [ ] API `/v1/health` berjalan.
-- [ ] API `/v1/holidays` berjalan.
-- [ ] API `/v1/holidays/check` berjalan.
-- [ ] API `/v1/workdays/check` berjalan.
-- [ ] API `/v1/workdays/add` berjalan.
-- [ ] API `/v1/workdays/diff` berjalan.
-- [ ] API `/v1/sources` berjalan.
-- [ ] API deploy di Cloudflare Workers.
-- [ ] Docs VitePress tersedia.
-- [ ] README menjelaskan status unofficial.
-- [ ] Disclaimer tersedia di README dan docs.
-- [ ] Tidak ada klaim sebagai API resmi pemerintah.
+- [x] Generated JSON tersedia.
+- [x] Core workday logic memiliki unit test.
+- [x] API `/v1/health` berjalan.
+- [x] API `/v1/holidays` berjalan.
+- [x] API `/v1/holidays/check` berjalan.
+- [x] API `/v1/workdays/check` berjalan.
+- [x] API `/v1/workdays/add` berjalan.
+- [x] API `/v1/workdays/diff` berjalan.
+- [x] API `/v1/sources` berjalan.
+- [x] API deploy di Cloudflare Workers.
+- [x] Docs VitePress tersedia.
+- [x] README menjelaskan status unofficial.
+- [x] Disclaimer tersedia di README dan docs.
+- [x] Tidak ada klaim sebagai API resmi pemerintah.
 
 ## Suggested Implementation Order
 

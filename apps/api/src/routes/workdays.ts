@@ -9,11 +9,18 @@ import {
   getRequiredDate,
   getRequiredPositiveInteger,
 } from "../utils/date.js";
+import { assertKnownQueryParams } from "../utils/query.js";
 import { successResponse } from "../utils/response.js";
 
 export const workdaysRoute = new Hono();
 
 workdaysRoute.get("/check", (c) => {
+  assertKnownQueryParams(c.req.query(), [
+    "date",
+    "includeCollectiveLeave",
+    "weekend",
+  ]);
+
   const date = getRequiredDate(c.req.query("date"), "date");
   const includeCollectiveLeave = getOptionalBoolean(
     c.req.query("includeCollectiveLeave"),
@@ -31,6 +38,13 @@ workdaysRoute.get("/check", (c) => {
 });
 
 workdaysRoute.get("/add", (c) => {
+  assertKnownQueryParams(c.req.query(), [
+    "date",
+    "days",
+    "includeCollectiveLeave",
+    "weekend",
+  ]);
+
   const date = getRequiredDate(c.req.query("date"), "date");
   const days = getRequiredPositiveInteger(c.req.query("days"), "days");
   const includeCollectiveLeave = getOptionalBoolean(
@@ -50,6 +64,14 @@ workdaysRoute.get("/add", (c) => {
 });
 
 workdaysRoute.get("/diff", (c) => {
+  assertKnownQueryParams(c.req.query(), [
+    "start",
+    "end",
+    "includeCollectiveLeave",
+    "inclusive",
+    "weekend",
+  ]);
+
   const start = getRequiredDate(c.req.query("start"), "start");
   const end = getRequiredDate(c.req.query("end"), "end");
   const includeCollectiveLeave = getOptionalBoolean(
