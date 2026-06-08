@@ -1,0 +1,379 @@
+{
+  "year": 2026,
+  "countryCode": "ID",
+  "revision": 1,
+  "status": "verified",
+  "updatedAt": "2025-09-19",
+  "sources": [
+    {
+      "id": "skb-3-menteri-2026-kemenko-pmk",
+      "title": "Pemerintah Tetapkan 17 Hari Libur Nasional dan 8 Hari Cuti Bersama Tahun 2026",
+      "type": "SKB",
+      "url": "https://www.kemenkopmk.go.id/pemerintah-tetapkan-17-hari-libur-nasional-dan-8-hari-cuti-bersama-tahun-2026",
+      "publisher": "Kemenko PMK",
+      "publishedAt": "2025-09-19",
+      "official": true
+    },
+    {
+      "id": "skb-3-menteri-2026-setneg",
+      "title": "Inilah SKB 3 Menteri Libur Nasional dan Cuti Bersama 2026",
+      "type": "SKB",
+      "url": "https://www.setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "publisher": "Sekretariat Negara",
+      "publishedAt": "2025-09-19",
+      "official": true
+    }
+  ],
+  "holidays": [
+    {
+      "date": "2026-01-01",
+      "localName": "Tahun Baru 2026 Masehi",
+      "name": "New Year's Day 2026",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Thursday",
+      "localDay": "Kamis",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-01-16",
+      "localName": "Isra Mikraj Nabi Muhammad SAW",
+      "name": "Isra and Mi'raj of Prophet Muhammad",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Friday",
+      "localDay": "Jumat",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-02-16",
+      "localName": "Cuti Bersama Tahun Baru Imlek 2577 Kongzili",
+      "name": "Collective Leave for Chinese New Year 2577 Kongzili",
+      "type": "collective_leave",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Monday",
+      "localDay": "Senin",
+      "isNationalHoliday": false,
+      "isCollectiveLeave": true
+    },
+    {
+      "date": "2026-02-17",
+      "localName": "Tahun Baru Imlek 2577 Kongzili",
+      "name": "Chinese New Year 2577 Kongzili",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Tuesday",
+      "localDay": "Selasa",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-03-18",
+      "localName": "Cuti Bersama Hari Suci Nyepi Tahun Baru Saka 1948",
+      "name": "Collective Leave for Nyepi Saka New Year 1948",
+      "type": "collective_leave",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Wednesday",
+      "localDay": "Rabu",
+      "isNationalHoliday": false,
+      "isCollectiveLeave": true
+    },
+    {
+      "date": "2026-03-19",
+      "localName": "Hari Suci Nyepi Tahun Baru Saka 1948",
+      "name": "Nyepi Saka New Year 1948",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Thursday",
+      "localDay": "Kamis",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-03-20",
+      "localName": "Cuti Bersama Idulfitri 1447 Hijriah",
+      "name": "Collective Leave for Eid al-Fitr 1447 H",
+      "type": "collective_leave",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Friday",
+      "localDay": "Jumat",
+      "isNationalHoliday": false,
+      "isCollectiveLeave": true
+    },
+    {
+      "date": "2026-03-21",
+      "localName": "Idulfitri 1447 Hijriah",
+      "name": "Eid al-Fitr 1447 H",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Saturday",
+      "localDay": "Sabtu",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-03-22",
+      "localName": "Idulfitri 1447 Hijriah",
+      "name": "Eid al-Fitr 1447 H",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Sunday",
+      "localDay": "Minggu",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-03-23",
+      "localName": "Cuti Bersama Idulfitri 1447 Hijriah",
+      "name": "Collective Leave for Eid al-Fitr 1447 H",
+      "type": "collective_leave",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Monday",
+      "localDay": "Senin",
+      "isNationalHoliday": false,
+      "isCollectiveLeave": true
+    },
+    {
+      "date": "2026-03-24",
+      "localName": "Cuti Bersama Idulfitri 1447 Hijriah",
+      "name": "Collective Leave for Eid al-Fitr 1447 H",
+      "type": "collective_leave",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Tuesday",
+      "localDay": "Selasa",
+      "isNationalHoliday": false,
+      "isCollectiveLeave": true
+    },
+    {
+      "date": "2026-04-03",
+      "localName": "Wafat Yesus Kristus",
+      "name": "Good Friday",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Friday",
+      "localDay": "Jumat",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-04-05",
+      "localName": "Kebangkitan Yesus Kristus Paskah",
+      "name": "Easter",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Sunday",
+      "localDay": "Minggu",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-05-01",
+      "localName": "Hari Buruh Internasional",
+      "name": "International Workers' Day",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Friday",
+      "localDay": "Jumat",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-05-14",
+      "localName": "Kenaikan Yesus Kristus",
+      "name": "Ascension of Jesus Christ",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Thursday",
+      "localDay": "Kamis",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-05-15",
+      "localName": "Cuti Bersama Kenaikan Yesus Kristus",
+      "name": "Collective Leave for Ascension of Jesus Christ",
+      "type": "collective_leave",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Friday",
+      "localDay": "Jumat",
+      "isNationalHoliday": false,
+      "isCollectiveLeave": true
+    },
+    {
+      "date": "2026-05-27",
+      "localName": "Iduladha 1447 Hijriah",
+      "name": "Eid al-Adha 1447 H",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Wednesday",
+      "localDay": "Rabu",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-05-28",
+      "localName": "Cuti Bersama Iduladha 1447 Hijriah",
+      "name": "Collective Leave for Eid al-Adha 1447 H",
+      "type": "collective_leave",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Thursday",
+      "localDay": "Kamis",
+      "isNationalHoliday": false,
+      "isCollectiveLeave": true
+    },
+    {
+      "date": "2026-05-31",
+      "localName": "Hari Raya Waisak 2570 BE",
+      "name": "Vesak Day 2570 BE",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Sunday",
+      "localDay": "Minggu",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-06-01",
+      "localName": "Hari Lahir Pancasila",
+      "name": "Pancasila Day",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Monday",
+      "localDay": "Senin",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-06-16",
+      "localName": "1 Muharam Tahun Baru Islam 1448 Hijriah",
+      "name": "Islamic New Year 1448 H",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Tuesday",
+      "localDay": "Selasa",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-08-17",
+      "localName": "Proklamasi Kemerdekaan",
+      "name": "Independence Day",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Monday",
+      "localDay": "Senin",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-08-25",
+      "localName": "Maulid Nabi Muhammad SAW",
+      "name": "Mawlid of Prophet Muhammad",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Tuesday",
+      "localDay": "Selasa",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    },
+    {
+      "date": "2026-12-24",
+      "localName": "Cuti Bersama Kelahiran Yesus Kristus",
+      "name": "Collective Leave for Christmas Day",
+      "type": "collective_leave",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Thursday",
+      "localDay": "Kamis",
+      "isNationalHoliday": false,
+      "isCollectiveLeave": true
+    },
+    {
+      "date": "2026-12-25",
+      "localName": "Kelahiran Yesus Kristus",
+      "name": "Christmas Day",
+      "type": "national_holiday",
+      "sourceIds": [
+        "skb-3-menteri-2026-kemenko-pmk",
+        "skb-3-menteri-2026-setneg"
+      ],
+      "day": "Friday",
+      "localDay": "Jumat",
+      "isNationalHoliday": true,
+      "isCollectiveLeave": false
+    }
+  ]
+}

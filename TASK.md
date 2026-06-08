@@ -56,77 +56,77 @@ Tujuan: menyiapkan format data tahunan yang valid, mudah direview, dan bisa dige
 
 ### Schema & Format
 
-- [ ] Buat `data/schemas/source.schema.json`.
-- [ ] Buat `data/schemas/generated.schema.json`.
-- [ ] Definisikan enum holiday type MVP:
-  - [ ] `national_holiday`
-  - [ ] `collective_leave`
-- [ ] Definisikan enum status dataset:
-  - [ ] `draft`
-  - [ ] `verified`
-  - [ ] `archived`
-  - [ ] `deprecated`
-- [ ] Pastikan schema mendukung metadata:
-  - [ ] `year`
-  - [ ] `countryCode`
-  - [ ] `revision`
-  - [ ] `status`
-  - [ ] `expected`
-  - [ ] `sources`
-  - [ ] `holidays`
+- [x] Buat `data/schemas/source.schema.json`.
+- [x] Buat `data/schemas/generated.schema.json`.
+- [x] Definisikan enum holiday type MVP:
+  - [x] `national_holiday`
+  - [x] `collective_leave`
+- [x] Definisikan enum status dataset:
+  - [x] `draft`
+  - [x] `verified`
+  - [x] `archived`
+  - [x] `deprecated`
+- [x] Pastikan schema mendukung metadata:
+  - [x] `year`
+  - [x] `countryCode`
+  - [x] `revision`
+  - [x] `status`
+  - [x] `expected`
+  - [x] `sources`
+  - [x] `holidays`
 
 ### Source Data
 
-- [ ] Buat `data/sources/2026.yaml`.
-- [ ] Input data libur nasional 2026 dari sumber resmi.
-- [ ] Input data cuti bersama 2026 dari sumber resmi.
-- [ ] Buat `data/sources/2025.yaml`.
-- [ ] Input data libur nasional 2025 dari sumber resmi.
-- [ ] Input data cuti bersama 2025 dari sumber resmi.
-- [ ] Pastikan setiap holiday memiliki `sourceIds`.
-- [ ] Pastikan minimal ada satu source dengan `official: true` untuk setiap tahun.
-- [ ] Pastikan `expected.nationalHolidayCount` sesuai data.
-- [ ] Pastikan `expected.collectiveLeaveCount` sesuai data.
+- [x] Buat `data/sources/2026.yaml`.
+- [x] Input data libur nasional 2026 dari sumber resmi.
+- [x] Input data cuti bersama 2026 dari sumber resmi.
+- [x] Buat `data/sources/2025.yaml`.
+- [x] Input data libur nasional 2025 dari sumber resmi.
+- [x] Input data cuti bersama 2025 dari sumber resmi.
+- [x] Pastikan setiap holiday memiliki `sourceIds`.
+- [x] Pastikan minimal ada satu source dengan `official: true` untuk setiap tahun.
+- [x] Pastikan `expected.nationalHolidayCount` sesuai data.
+- [x] Pastikan `expected.collectiveLeaveCount` sesuai data.
 
 ### Validation Script
 
-- [ ] Buat `scripts/validate.ts`.
-- [ ] Validasi YAML dapat dibaca.
-- [ ] Validasi schema source dataset.
-- [ ] Validasi tanggal memakai format `YYYY-MM-DD`.
-- [ ] Validasi tahun pada tanggal sama dengan field `year`.
-- [ ] Validasi `countryCode` bernilai `ID`.
-- [ ] Validasi `type` berada dalam enum yang diizinkan.
-- [ ] Validasi tidak ada duplikasi `date + type + localName`.
-- [ ] Validasi semua `sourceIds` merujuk ke source yang ada.
-- [ ] Validasi minimal ada satu source official.
-- [ ] Validasi jumlah `national_holiday`.
-- [ ] Validasi jumlah `collective_leave`.
-- [ ] Validasi urutan holiday berdasarkan tanggal ascending.
-- [ ] Tambahkan script root `pnpm validate:data`.
+- [x] Buat `scripts/validate.ts`.
+- [x] Validasi YAML dapat dibaca.
+- [x] Validasi schema source dataset.
+- [x] Validasi tanggal memakai format `YYYY-MM-DD`.
+- [x] Validasi tahun pada tanggal sama dengan field `year`.
+- [x] Validasi `countryCode` bernilai `ID`.
+- [x] Validasi `type` berada dalam enum yang diizinkan.
+- [x] Validasi tidak ada duplikasi `date + type + localName`.
+- [x] Validasi semua `sourceIds` merujuk ke source yang ada.
+- [x] Validasi minimal ada satu source official.
+- [x] Validasi jumlah `national_holiday`.
+- [x] Validasi jumlah `collective_leave`.
+- [x] Validasi urutan holiday berdasarkan tanggal ascending.
+- [x] Tambahkan script root `pnpm validate:data`.
 
 ### Generation Script
 
-- [ ] Buat `scripts/generate.ts`.
-- [ ] Generate `data/generated/id-2025.json`.
-- [ ] Generate `data/generated/id-2026.json`.
-- [ ] Generate `data/generated/id-latest.json`.
-- [ ] Tambahkan field hari:
-  - [ ] `day`
-  - [ ] `localDay`
-- [ ] Tambahkan boolean:
-  - [ ] `isNationalHoliday`
-  - [ ] `isCollectiveLeave`
-- [ ] Validasi generated JSON terhadap schema.
-- [ ] Tambahkan script root `pnpm generate:data`.
+- [x] Buat `scripts/generate.ts`.
+- [x] Generate `data/generated/id-2025.json`.
+- [x] Generate `data/generated/id-2026.json`.
+- [x] Generate `data/generated/id-latest.json`.
+- [x] Tambahkan field hari:
+  - [x] `day`
+  - [x] `localDay`
+- [x] Tambahkan boolean:
+  - [x] `isNationalHoliday`
+  - [x] `isCollectiveLeave`
+- [x] Validasi generated JSON terhadap schema.
+- [x] Tambahkan script root `pnpm generate:data`.
 
 ### Acceptance Criteria
 
-- [ ] `pnpm validate:data` berhasil.
-- [ ] `pnpm generate:data` berhasil.
-- [ ] Dataset 2025 dan 2026 tersedia.
-- [ ] Generated JSON tersedia dan valid.
-- [ ] Data bisa diverifikasi lewat metadata sumber resmi.
+- [x] `pnpm validate:data` berhasil.
+- [x] `pnpm generate:data` berhasil.
+- [x] Dataset 2025 dan 2026 tersedia.
+- [x] Generated JSON tersedia dan valid.
+- [x] Data bisa diverifikasi lewat metadata sumber resmi.
 
 ## Phase 2 - Core Package
 

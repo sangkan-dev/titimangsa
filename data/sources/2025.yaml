@@ -1,0 +1,230 @@
+year: 2025
+countryCode: ID
+revision: 2
+status: verified
+updatedAt: "2025-08-07"
+
+expected:
+  nationalHolidayCount: 17
+  collectiveLeaveCount: 11
+
+sources:
+  - id: skb-3-menteri-2025
+    title: "SKB 3 Menteri Hari Libur Nasional dan Cuti Bersama Tahun 2025"
+    type: "SKB"
+    url: "https://www.kemenkopmk.go.id/pemerintah-tetapkan-hari-libur-nasional-dan-cuti-bersama-tahun-2025"
+    publisher: "Kemenko PMK"
+    publishedAt: "2024-10-15"
+    official: true
+  - id: skb-perubahan-3-menteri-2025
+    title: "SKB Perubahan Libur Nasional dan Cuti Bersama Tahun 2025"
+    type: "SKB"
+    url: "https://www.kemenkopmk.go.id/pemerintah-tetapkan-cuti-bersama-18-agustus-2025-untuk-peringatan-hut-ke-80-ri"
+    publisher: "Kemenko PMK"
+    publishedAt: "2025-08-07"
+    official: true
+  - id: jdih-kemnaker-skb-2025-001
+    title: "Keputusan Menteri Ketenagakerjaan Nomor 1 Tahun 2025"
+    type: "JDIH"
+    url: "https://jdih.kemnaker.go.id/peraturan/detail/2712/skb-3-menteri-nomor-1-tahun-2025"
+    publisher: "Kemnaker"
+    publishedAt: "2025-08-07"
+    official: true
+
+holidays:
+  - date: "2025-01-01"
+    localName: "Tahun Baru 2025 Masehi"
+    name: "New Year's Day 2025"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-01-27"
+    localName: "Isra Mikraj Nabi Muhammad SAW"
+    name: "Isra and Mi'raj of Prophet Muhammad"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-01-28"
+    localName: "Cuti Bersama Tahun Baru Imlek 2576 Kongzili"
+    name: "Collective Leave for Chinese New Year 2576 Kongzili"
+    type: "collective_leave"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-01-29"
+    localName: "Tahun Baru Imlek 2576 Kongzili"
+    name: "Chinese New Year 2576 Kongzili"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-03-28"
+    localName: "Cuti Bersama Hari Suci Nyepi Tahun Baru Saka 1947"
+    name: "Collective Leave for Nyepi Saka New Year 1947"
+    type: "collective_leave"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-03-29"
+    localName: "Hari Suci Nyepi Tahun Baru Saka 1947"
+    name: "Nyepi Saka New Year 1947"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-03-31"
+    localName: "Idulfitri 1446 Hijriah"
+    name: "Eid al-Fitr 1446 H"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-04-01"
+    localName: "Idulfitri 1446 Hijriah"
+    name: "Eid al-Fitr 1446 H"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-04-02"
+    localName: "Cuti Bersama Idulfitri 1446 Hijriah"
+    name: "Collective Leave for Eid al-Fitr 1446 H"
+    type: "collective_leave"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-04-03"
+    localName: "Cuti Bersama Idulfitri 1446 Hijriah"
+    name: "Collective Leave for Eid al-Fitr 1446 H"
+    type: "collective_leave"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-04-04"
+    localName: "Cuti Bersama Idulfitri 1446 Hijriah"
+    name: "Collective Leave for Eid al-Fitr 1446 H"
+    type: "collective_leave"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-04-07"
+    localName: "Cuti Bersama Idulfitri 1446 Hijriah"
+    name: "Collective Leave for Eid al-Fitr 1446 H"
+    type: "collective_leave"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-04-18"
+    localName: "Wafat Yesus Kristus"
+    name: "Good Friday"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-04-20"
+    localName: "Kebangkitan Yesus Kristus Paskah"
+    name: "Easter"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-05-01"
+    localName: "Hari Buruh Internasional"
+    name: "International Workers' Day"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-05-12"
+    localName: "Hari Raya Waisak 2569 BE"
+    name: "Vesak Day 2569 BE"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-05-13"
+    localName: "Cuti Bersama Hari Raya Waisak 2569 BE"
+    name: "Collective Leave for Vesak Day 2569 BE"
+    type: "collective_leave"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-05-29"
+    localName: "Kenaikan Yesus Kristus"
+    name: "Ascension of Jesus Christ"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-05-30"
+    localName: "Cuti Bersama Kenaikan Yesus Kristus"
+    name: "Collective Leave for Ascension of Jesus Christ"
+    type: "collective_leave"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-06-01"
+    localName: "Hari Lahir Pancasila"
+    name: "Pancasila Day"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-06-06"
+    localName: "Iduladha 1446 Hijriah"
+    name: "Eid al-Adha 1446 H"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-06-09"
+    localName: "Cuti Bersama Iduladha 1446 Hijriah"
+    name: "Collective Leave for Eid al-Adha 1446 H"
+    type: "collective_leave"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-06-27"
+    localName: "1 Muharam Tahun Baru Islam 1447 Hijriah"
+    name: "Islamic New Year 1447 H"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-08-17"
+    localName: "Proklamasi Kemerdekaan"
+    name: "Independence Day"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-08-18"
+    localName: "Cuti Bersama Proklamasi Kemerdekaan"
+    name: "Collective Leave for Independence Day"
+    type: "collective_leave"
+    sourceIds:
+      - skb-perubahan-3-menteri-2025
+      - jdih-kemnaker-skb-2025-001
+
+  - date: "2025-09-05"
+    localName: "Maulid Nabi Muhammad SAW"
+    name: "Mawlid of Prophet Muhammad"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-12-25"
+    localName: "Kelahiran Yesus Kristus"
+    name: "Christmas Day"
+    type: "national_holiday"
+    sourceIds:
+      - skb-3-menteri-2025
+
+  - date: "2025-12-26"
+    localName: "Cuti Bersama Kelahiran Yesus Kristus"
+    name: "Collective Leave for Christmas Day"
+    type: "collective_leave"
+    sourceIds:
+      - skb-3-menteri-2025

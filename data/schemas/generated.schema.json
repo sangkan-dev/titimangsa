@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sangkan.dev/titimangsa/schemas/generated.schema.json",
+  "title": "Titimangsa Generated Dataset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "year",
+    "countryCode",
+    "revision",
+    "status",
+    "updatedAt",
+    "sources",
+    "holidays"
+  ],
+  "properties": {
+    "year": {
+      "type": "integer",
+      "minimum": 1900,
+      "maximum": 9999
+    },
+    "countryCode": {
+      "type": "string",
+      "const": "ID"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "verified", "archived", "deprecated"]
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "type",
+          "url",
+          "publisher",
+          "publishedAt",
+          "official"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "publisher": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "official": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "holidays": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "date",
+          "day",
+          "localDay",
+          "localName",
+          "name",
+          "type",
+          "isNationalHoliday",
+          "isCollectiveLeave",
+          "sourceIds"
+        ],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "day": {
+            "type": "string",
+            "enum": [
+              "Sunday",
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ]
+          },
+          "localDay": {
+            "type": "string",
+            "enum": [
+              "Minggu",
+              "Senin",
+              "Selasa",
+              "Rabu",
+              "Kamis",
+              "Jumat",
+              "Sabtu"
+            ]
+          },
+          "localName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "national_holiday",
+              "collective_leave",
+              "regional_holiday",
+              "observance",
+              "work_arrangement"
+            ]
+          },
+          "isNationalHoliday": {
+            "type": "boolean"
+          },
+          "isCollectiveLeave": {
+            "type": "boolean"
+          },
+          "sourceIds": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9-]*$"
+            }
+          }
+        }
+      }
+    }
+  }
+}
