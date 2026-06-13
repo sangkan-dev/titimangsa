@@ -56,6 +56,10 @@ After the first publish, configure npm Trusted Publishing for:
 - workflow: `publish-npm.yml`
 - environment: `npm`
 
-Then create future tagged GitHub releases. The `Publish npm Package` workflow
-validates, packs, and publishes the package through `npm publish` with automatic
-provenance. It can also be run manually for an existing unpublished tag.
+Then create the matching tagged GitHub release. The workflow recognizes that the
+first manually published version already exists and does not publish it again.
+
+For future versions, create the tagged GitHub release after merging the version
+change. The `Publish npm Package` workflow validates, packs, and publishes the
+package through `npm publish` with automatic provenance. It can also be run
+manually for an existing unpublished tag.
