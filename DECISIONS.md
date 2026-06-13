@@ -102,3 +102,34 @@ Reasoning:
 - a dedicated docs subdomain avoids mixing GitHub Pages and Worker routing on
   one host
 - an API alias can be introduced later without breaking existing clients
+
+## 0008 - Use Automation-Assisted Curation
+
+Status: accepted
+
+Automation may discover official sources and extract candidate dates into
+`data/drafts`, but it must never publish or promote data to `verified`
+automatically.
+
+Reasoning:
+
+- official documents and revisions are not consistently structured
+- automated classification can confuse holidays, collective leave, and work
+  arrangements
+- draft metadata, raw text, and confidence make review auditable
+- human approval preserves trust before generated JSON and API deployment
+
+## 0009 - Publish The Core Package Through npm Trusted Publishing
+
+Status: accepted
+
+The reusable core package will be published as `@sangkan-dev/titimangsa` from
+a tagged GitHub release using npm Trusted Publishing and provenance after its
+authenticated first publish.
+
+Reasoning:
+
+- consumers receive built JavaScript and TypeScript declarations
+- trusted publishing avoids a long-lived npm token in repository secrets
+- provenance links published artifacts to the GitHub Actions workflow
+- tags and package versions remain traceable

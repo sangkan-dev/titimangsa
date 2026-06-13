@@ -3,6 +3,10 @@
 Titimangsa provides a read-only API for Indonesian national holidays, collective
 leave, and business day calculations.
 
+Use the hosted API when you want centrally updated data without adding a runtime
+dependency. Use the npm package when calculations should run inside your
+application.
+
 Base URL:
 
 ```txt
@@ -68,6 +72,27 @@ curl "https://titimangsa.sangkan.dev/v1/workdays/diff?start=2026-01-01&end=2026-
 ```
 
 The `inclusive` option defaults to `true`.
+
+## npm Package
+
+```sh
+pnpm add @sangkan-dev/titimangsa
+```
+
+```ts
+import {
+  addWorkdays,
+  checkWorkday,
+  getHolidays,
+} from "@sangkan-dev/titimangsa";
+
+const holidays = getHolidays(2026, { type: "national_holiday" });
+const workday = checkWorkday("2026-03-20");
+const dueDate = addWorkdays("2026-03-18", 5);
+```
+
+Collective leave is included by default. Pass
+`{ includeCollectiveLeave: false }` to exclude it.
 
 ## Response Shape
 

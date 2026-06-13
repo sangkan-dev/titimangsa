@@ -30,6 +30,11 @@ by `scripts/generate.ts`.
 
 Do not edit generated JSON directly.
 
+Automation-generated candidates belong in `data/drafts`, not `data/sources`.
+Drafts must remain review-required and must be checked against the original
+official document before a maintainer manually promotes their contents into a
+source dataset. See `AUTOMATION.md`.
+
 ## Expected Source File Shape
 
 ```yaml
@@ -131,5 +136,6 @@ Once Phase 1 scripts exist:
 ```sh
 XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm validate:data
 XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm generate:data
+XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm automation:check
 XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.cache}" corepack pnpm test
 ```

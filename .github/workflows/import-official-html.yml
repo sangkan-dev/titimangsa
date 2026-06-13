@@ -1,0 +1,68 @@
+name: Import Official HTML Draft
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: Dataset year
+        required: true
+        type: string
+      url:
+        description: Official HTTPS .go.id page URL
+        required: true
+        type: string
+      publisher:
+        description: Official publisher name
+        required: true
+        type: string
+      title:
+        description: Optional source title override
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  import:
+    name: Extract Review-Required Draft
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Import official HTML source
+        env:
+          YEAR: ${{ inputs.year }}
+          URL: ${{ inputs.url }}
+          PUBLISHER: ${{ inputs.publisher }}
+          TITLE: ${{ inputs.title }}
+        run: |
+          args=(--year "$YEAR" --url "$URL" --publisher "$PUBLISHER")
+          if [ -n "$TITLE" ]; then
+            args+=(--title "$TITLE")
+          fi
+          pnpm import:official-html -- "${args[@]}"
+
+      - name: Validate draft
+        run: pnpm automation:check
+
+      - name: Upload draft artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-source-draft-${{ inputs.year }}
+          path: data/drafts/*.generated.yaml
+          if-no-files-found: error

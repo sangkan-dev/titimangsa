@@ -11,6 +11,12 @@ Titimangsa is designed as a small read-only data API.
 Official public sources
         |
         v
+Automation candidates in data/drafts
+        |
+        v
+Human review
+        |
+        v
 Manual YAML dataset
         |
         v
@@ -126,6 +132,7 @@ Owns public documentation:
 Owns curated and generated data:
 
 - `data/sources`: manually curated source YAML
+- `data/drafts`: automation-generated candidates requiring human review
 - `data/generated`: generated JSON
 - `data/schemas`: validation schemas
 
@@ -136,6 +143,7 @@ Owns repository automation:
 - dataset validation
 - dataset generation
 - consistency checks
+- draft candidate validation
 
 ## Dependency Direction
 

@@ -115,6 +115,7 @@ export default defineConfig({
           { text: "Getting Started", link: "/guide/getting-started" },
           { text: "API Reference", link: "/guide/api-reference" },
           { text: "Data Sources", link: "/guide/data-sources" },
+          { text: "Dataset Automation", link: "/guide/automation" },
           { text: "Contributing Data", link: "/guide/contributing-data" },
           { text: "Limitations", link: "/guide/limitations" },
           { text: "Changelog", link: "/guide/changelog" },

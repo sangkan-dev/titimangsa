@@ -32,3 +32,30 @@ gh release create v0.1.0 \
 ```
 
 8. Announce the release using `ANNOUNCEMENT.md`.
+
+## npm Package
+
+The npm package version must match its Git tag. Package-only fixes should use a
+new patch release instead of moving an existing tag.
+
+The first publish creates the package and requires an authenticated npm
+maintainer:
+
+```sh
+npm login
+corepack pnpm --filter @sangkan-dev/titimangsa build
+corepack pnpm --filter @sangkan-dev/titimangsa lint:package
+cd packages/core
+npm publish --access public
+```
+
+After the first publish, configure npm Trusted Publishing for:
+
+- package: `@sangkan-dev/titimangsa`
+- repository: `sangkan-dev/titimangsa`
+- workflow: `publish-npm.yml`
+- environment: `npm`
+
+Then create future tagged GitHub releases. The `Publish npm Package` workflow
+validates, packs, and publishes the package through `npm publish` with automatic
+provenance. It can also be run manually for an existing unpublished tag.

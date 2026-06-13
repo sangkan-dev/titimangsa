@@ -1,25 +1,63 @@
 {
   "name": "@sangkan-dev/titimangsa",
-  "version": "0.1.0",
-  "description": "Core holiday and business day logic for Titimangsa",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "version": "0.1.1",
+  "description": "Indonesia holiday data and business day utilities curated from official public sources.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./src/index.ts",
-      "import": "./src/index.ts"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     }
   },
+  "sideEffects": false,
   "files": [
-    "src",
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "test": "vitest run",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap --clean",
+    "lint:package": "publint",
+    "prepublishOnly": "pnpm test && pnpm build && pnpm lint:package"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "indonesia",
+    "holiday",
+    "public-holiday",
+    "business-day",
+    "workday",
+    "cuti-bersama"
+  ],
+  "author": "sangkan-dev",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "homepage": "https://docs.titimangsa.sangkan.dev/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sangkan-dev/titimangsa.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/sangkan-dev/titimangsa/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "publint": "^0.3.21",
+    "tsup": "^8.5.1"
+  }
 }

@@ -26,6 +26,9 @@ When adding or changing holiday data:
 - Review expected national holiday and collective leave counts.
 - Run `pnpm generate:data`; never edit generated JSON manually.
 - Run validation and tests before opening a pull request.
+- Treat files under `data/drafts` as unverified candidates only.
+- Never promote automation output without comparing it to the original official
+  document.
 
 Expected commands:
 
@@ -33,6 +36,7 @@ Expected commands:
 corepack pnpm install --frozen-lockfile
 corepack pnpm validate:data
 corepack pnpm generate:data
+corepack pnpm automation:check
 corepack pnpm test
 corepack pnpm typecheck
 corepack pnpm format:check

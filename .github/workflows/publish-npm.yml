@@ -1,0 +1,76 @@
+name: Publish npm Package
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Git tag to publish
+        required: true
+        default: v0.1.1
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    name: Publish @sangkan-dev/titimangsa
+    runs-on: ubuntu-latest
+    environment: npm
+
+    steps:
+      - name: Resolve release ref
+        id: release
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          INPUT_REF: ${{ inputs.ref }}
+        run: |
+          if [ "$EVENT_NAME" = "release" ]; then
+            echo "ref=$RELEASE_TAG" >> "$GITHUB_OUTPUT"
+          else
+            echo "ref=$INPUT_REF" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout release tag
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ steps.release.outputs.ref }}
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify tag matches package version
+        env:
+          RELEASE_REF: ${{ steps.release.outputs.ref }}
+        run: |
+          PACKAGE_VERSION="$(node -p "require('./packages/core/package.json').version")"
+          test "$RELEASE_REF" = "v$PACKAGE_VERSION"
+
+      - name: Validate repository
+        run: |
+          pnpm validate:data
+          pnpm test
+          pnpm typecheck
+
+      - name: Build and inspect package
+        run: |
+          pnpm --filter @sangkan-dev/titimangsa build
+          pnpm --filter @sangkan-dev/titimangsa lint:package
+          pnpm --filter @sangkan-dev/titimangsa pack --pack-destination "$RUNNER_TEMP"
+
+      - name: Publish package
+        working-directory: packages/core
+        run: npm publish --access public
