@@ -472,6 +472,57 @@ MVP dianggap selesai jika semua item berikut terpenuhi:
 - [x] Disclaimer tersedia di README dan docs.
 - [x] Tidak ada klaim sebagai API resmi pemerintah.
 
+## Phase 8 - npm Package Distribution
+
+Tujuan: mendistribusikan reusable core package dengan artifact dan provenance
+yang dapat diverifikasi.
+
+### Tasks
+
+- [x] Bundle package menjadi ESM dan CommonJS.
+- [x] Generate TypeScript declarations.
+- [x] Tambahkan package metadata, README, dan license.
+- [x] Tambahkan `publint` ke validasi package.
+- [x] Tambahkan workflow npm Trusted Publishing.
+- [ ] Publish `@sangkan-dev/titimangsa@0.1.1`.
+- [ ] Konfigurasi Trusted Publisher di npm setelah first publish.
+
+### Acceptance Criteria
+
+- [x] Tarball package hanya membawa artifact dan dokumentasi yang dibutuhkan.
+- [x] Package lolos build, test, dan `publint`.
+- [ ] Package dapat di-install dari npm.
+
+## Phase 9 - Dataset Automation
+
+Tujuan: mengurangi input manual tanpa mengizinkan automation mempublikasikan
+data administratif tanpa review manusia.
+
+### Safety Foundation
+
+- [x] Pisahkan automation output ke `data/drafts`.
+- [x] Tambahkan schema draft dengan `status: draft`.
+- [x] Wajibkan `requiresReview: true`.
+- [x] Tambahkan `pnpm automation:check`.
+- [x] Dokumentasikan automation-assisted curation.
+
+### Future Tasks
+
+- [x] Implement manual official URL import.
+- [x] Implement HTML extraction ke candidate draft.
+- [x] Tambahkan manual GitHub Actions workflow untuk draft artifact.
+- [ ] Implement text-based PDF extraction ke candidate draft.
+- [ ] Implement official source allowlist dan discovery queries.
+- [ ] Implement scheduled source watcher.
+- [ ] Implement automated PR dengan validation report.
+- [ ] Implement notification untuk kandidat revisi.
+
+### Acceptance Criteria
+
+- [x] Automation tidak menulis langsung ke `data/sources` atau `data/generated`.
+- [x] Draft menyimpan confidence dan raw extraction text.
+- [ ] Source watcher menghasilkan perubahan hanya melalui review-required PR.
+
 ## Suggested Implementation Order
 
 1. Setup monorepo dan tooling dasar.

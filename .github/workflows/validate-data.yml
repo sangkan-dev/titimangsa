@@ -37,6 +37,9 @@ jobs:
       - name: Validate source data
         run: pnpm validate:data
 
+      - name: Validate automation drafts
+        run: pnpm automation:check
+
       - name: Generate data
         run: pnpm generate:data
 
@@ -53,7 +56,9 @@ jobs:
         run: pnpm test
 
       - name: Build core package
-        run: pnpm --filter @sangkan-dev/titimangsa build
+        run: |
+          pnpm --filter @sangkan-dev/titimangsa build
+          pnpm --filter @sangkan-dev/titimangsa lint:package
 
       - name: Build API
         run: pnpm --filter @sangkan-dev/titimangsa-api deploy:dry-run

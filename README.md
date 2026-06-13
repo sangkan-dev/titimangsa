@@ -44,6 +44,19 @@ Check whether a date is a workday:
 curl "https://titimangsa.sangkan.dev/v1/workdays/check?date=2026-03-20"
 ```
 
+Use the npm package:
+
+```sh
+pnpm add @sangkan-dev/titimangsa
+```
+
+```ts
+import { addWorkdays, checkWorkday } from "@sangkan-dev/titimangsa";
+
+const workday = checkWorkday("2026-03-20");
+const dueDate = addWorkdays("2026-03-18", 5);
+```
+
 Add five workdays:
 
 ```sh
@@ -72,6 +85,7 @@ unlimited.
 - Local docs app: [apps/docs](./apps/docs)
 - API contract: [API_CONTRACT.md](./API_CONTRACT.md)
 - Dataset guide: [DATASET.md](./DATASET.md)
+- Dataset automation guide: [AUTOMATION.md](./AUTOMATION.md)
 
 Production domain setup:
 
@@ -116,6 +130,9 @@ Required Cloudflare deployment secrets:
 The source of truth is manually curated YAML in `data/sources`. Generated JSON
 in `data/generated` is produced by `scripts/generate.ts` and should not be
 edited manually.
+
+Automation output is review-required draft data under `data/drafts`. Automation
+must never write directly to verified source data or generated runtime data.
 
 Current MVP datasets:
 

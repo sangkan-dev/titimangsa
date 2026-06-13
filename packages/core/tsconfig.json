@@ -44,7 +44,8 @@
 
     "moduleResolution": "nodenext",
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "ignoreDeprecations": "6.0"
   },
   "include": ["src/**/*.ts", "../../data/generated/*.json"],
   "exclude": ["src/**/*.test.ts"]

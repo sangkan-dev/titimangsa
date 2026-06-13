@@ -19,6 +19,12 @@ Docs:
 https://docs.titimangsa.sangkan.dev/
 ```
 
+npm package:
+
+```sh
+pnpm add @sangkan-dev/titimangsa
+```
+
 Example:
 
 ```sh

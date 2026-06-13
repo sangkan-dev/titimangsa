@@ -2,6 +2,21 @@
 
 All notable public changes to Titimangsa are documented in this file.
 
+## 0.1.1 - 2026-06-13
+
+### Added
+
+- Publish-ready `@sangkan-dev/titimangsa` package with ESM, CommonJS, and
+  TypeScript declaration outputs.
+- npm Trusted Publishing workflow with provenance.
+- Draft-only dataset automation schema, validation command, and safety guide.
+
+### Notes
+
+- Automation output remains unverified until reviewed against original official
+  documents.
+- Titimangsa is not an official government API.
+
 ## 0.1.0 - 2026-06-08
 
 Initial MVP release candidate.
